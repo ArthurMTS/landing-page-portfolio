@@ -1,35 +1,37 @@
 import { styled, Typography } from "@mui/material";
+import { colors } from "assets/pallet/colors";
 
 export const FooterWrapper = styled("header")({
   width: "100%",
-  backgroundColor: "#222",
-  height: 100,
+  backgroundColor: colors.bgPrimary,
+  height: 60,
   display: "flex",
-  flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "space-between",
+  padding: "0 20px",
 });
 
-export const FooterText = styled(Typography)({
-  color: "#F7F7F7",
-  fontSize: 18,
+export const FooterCopy = styled(Typography)({
+  color: colors.secondaryText,
+  fontSize: 14,
 });
 
-export const FooterAuthor = styled("a")({
+export const FooterLink = styled("a")({
   textDecoration: "none",
-  color: "#F7F7F7",
+  color: colors.secondaryText,
   cursor: "pointer",
-  fontSize: 18,
+  fontSize: 14,
   transition: "all .2s",
   "&:hover": {
-    color: "#0394fc",
-    "&:before": {
-      content: '"< "',
-      color: "#F7F7F7",
-    },
-    "&:after": {
-      content: '" />"',
-      color: "#F7F7F7",
-    }
+    color: colors.primary,
+  },
+});
+
+export const FooterIcons = styled("div")({
+  display: "flex",
+  gap: 15,
+  alignItems: "center",
+  "& img": {
+    cursor: "pointer",
   },
 });

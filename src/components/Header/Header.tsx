@@ -9,9 +9,9 @@ export const Header: React.FC = () => {
       </Title>
 
       <NavBar>
-        <NavLink href="#">INÍCIO</NavLink>
-        <NavLink href="#">PROJETOS</NavLink>
-        <NavLink href="#">HABILIDADES</NavLink>
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#">Skills</NavLink>
+        <NavLink href="#">Portfolio</NavLink>
       </NavBar>
     </HeaderWrapper>
   );

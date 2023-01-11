@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
       <ViewPage>
 
       </ViewPage>
-      <ViewPage className="secondary">
+      <ViewPage>
         
       </ViewPage>
       <ViewPage className="last">
