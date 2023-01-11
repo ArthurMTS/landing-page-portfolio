@@ -11,6 +11,7 @@ export const HeaderWrapper = styled("header")({
   position: "fixed",
   left: 0,
   top: 0,
+  zIndex: 1,
 });
 
 export const Title = styled(Typography)({
@@ -37,6 +38,7 @@ export const NavBar = styled("nav")({
 });
 
 export const NavLink = styled("a")({
+  cursor: "pointer",
   textDecoration: "none",
   color: colors.primaryText,
   fontSize: 20,
