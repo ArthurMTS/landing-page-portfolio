@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
         <FooterLink href="https://github.com/ArthurMTS" target="_blank">
           <Icon name="github" />
         </FooterLink>
-        <FooterLink href="https://github.com/ArthurMTS" target="_blank">
+        <FooterLink href="https://www.linkedin.com/in/arthur-silva-24736320a/" target="_blank">
           <Icon name="linkedin" />
         </FooterLink>
       </FooterIcons>
