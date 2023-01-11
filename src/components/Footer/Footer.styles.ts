@@ -12,11 +12,17 @@ export const FooterWrapper = styled("header")({
 });
 
 export const FooterCopy = styled(Typography)({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   color: colors.secondaryText,
   fontSize: 14,
 });
 
 export const FooterLink = styled("a")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   textDecoration: "none",
   color: colors.secondaryText,
   cursor: "pointer",
@@ -31,6 +37,7 @@ export const FooterIcons = styled("div")({
   display: "flex",
   gap: 15,
   alignItems: "center",
+  justifyContent: "center",
   "& img": {
     cursor: "pointer",
   },
