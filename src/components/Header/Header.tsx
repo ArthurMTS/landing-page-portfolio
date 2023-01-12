@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderWrapper, NavBar, NavLink, Title } from "./Header.styles";
+import { HeaderWrapper, NavBar, NavLink, Switch, Title } from "./Header.styles";
 
 export const Header: React.FC = () => {
   return (
@@ -12,7 +12,9 @@ export const Header: React.FC = () => {
         <NavLink onClick={() => {window.scrollTo(0,0)}}>Home</NavLink>
         <NavLink href="#skills">Skills</NavLink>
         <NavLink href="#portfolio">Portfolio</NavLink>
+        <Switch />
       </NavBar>
+
     </HeaderWrapper>
   );
 };

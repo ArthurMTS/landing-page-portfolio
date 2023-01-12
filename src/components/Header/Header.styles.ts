@@ -1,4 +1,4 @@
-import { styled, Typography } from "@mui/material";
+import { styled, Typography, Switch as MuiSwitch } from "@mui/material";
 import { colors } from "assets/pallet/colors";
 
 export const HeaderWrapper = styled("header")({
@@ -16,6 +16,7 @@ export const HeaderWrapper = styled("header")({
 
 export const Title = styled(Typography)({
   color: colors.primaryText,
+  fontWeight: 700,
   fontSize: 26,
   transition: "all .2s",
   "&:before": {
@@ -46,5 +47,17 @@ export const NavLink = styled("a")({
   padding: "20px 10px",
   "&:hover": {
     backgroundColor: colors.primary,
+  },
+});
+
+export const Switch = styled(MuiSwitch)({
+  "& .MuiSwitch-switchBase.Mui-checked": {
+    color: colors.bgPrimary,
+    "&:hover": {
+      backgroundColor: colors.bgPrimary,
+    },
+  },
+  "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+    backgroundColor: colors.bgPrimary,
   },
 });
