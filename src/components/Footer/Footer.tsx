@@ -1,6 +1,11 @@
 import { Icon } from "components/Icon";
 import React from "react";
-import { FooterWrapper, FooterCopy, FooterLink, FooterIcons } from "./Footer.styles";
+import {
+  FooterWrapper,
+  FooterCopy,
+  FooterLink,
+  FooterIcons,
+} from "./Footer.styles";
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -17,7 +22,10 @@ export const Footer: React.FC = () => {
         <FooterLink href="https://github.com/ArthurMTS" target="_blank">
           <Icon name="github" />
         </FooterLink>
-        <FooterLink href="https://www.linkedin.com/in/arthur-silva-24736320a/" target="_blank">
+        <FooterLink
+          href="https://www.linkedin.com/in/arthur-silva-24736320a/"
+          target="_blank"
+        >
           <Icon name="linkedin" />
         </FooterLink>
       </FooterIcons>

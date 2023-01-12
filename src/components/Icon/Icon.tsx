@@ -14,14 +14,8 @@ interface IconProps {
   className?: string;
 }
 
-export const Icon: React.FC<IconProps> = ({
-  name,
-  alt,
-  className
-}) => {
+export const Icon: React.FC<IconProps> = ({ name, alt, className }) => {
   const Icon = Icons[name];
 
-  return (
-    <Img className={className} src={Icon} alt={alt} />
-  );
+  return <Img className={className} src={Icon} alt={alt} />;
 };
