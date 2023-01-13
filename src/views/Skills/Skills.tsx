@@ -11,7 +11,7 @@ import { Description } from "components/Description";
 import { SkillCard } from "components/SkillCard";
 
 export const Skills: React.FC = () => (
-  <PageContainer id="skills">
+  <PageContainer id="skills" className="center">
     <Title>
       <span>S</span>kills
     </Title>

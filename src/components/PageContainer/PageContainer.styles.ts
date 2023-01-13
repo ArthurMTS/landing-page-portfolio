@@ -9,7 +9,7 @@ export const PageContainerStyled = styled("section")({
   alignItems: "center",
   justifyContent: "space-between",
   padding: "0 80px",
-  "&#skills": {
+  "&.center": {
     justifyContent: "start !important",
     alignItems: "center",
     paddingTop: 80,
