@@ -1,7 +1,14 @@
-import { Typography } from "@mui/material";
-import { styled } from "@mui/system";
-import { colors } from "assets/pallet/colors";
+import { styled, Typography } from "@mui/material";
+import { ThemeContext } from "Contexts/theme";
+import React from "react";
 
-export const Caption = styled(Typography)({
-  color: colors.primaryText,
-});
+export default () => {
+  const { colors } = React.useContext(ThemeContext);
+
+  const Caption = styled(Typography)({
+    color: colors.textPrimary,
+    fontWeight: 700,
+  });
+
+  return { Caption }
+};

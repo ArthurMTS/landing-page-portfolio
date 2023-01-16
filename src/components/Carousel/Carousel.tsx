@@ -1,6 +1,6 @@
 import { Icon } from "components/Icon";
 import React from "react";
-import { CarouselImage, CarouselInner, CarouselStyled, CircleButton, Navigate } from "./Carousel.styles";
+import styles from "./Carousel.styles";
 
 interface CarouselItemProps {
   img: string;
@@ -12,6 +12,8 @@ interface CarouselProps {
 }
 
 export const CarouselItem: React.FC<CarouselItemProps> = ({ img }) => {
+  const { CarouselImage } = styles();
+
   return (
     <CarouselImage src={img} />
   );
@@ -22,6 +24,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   width
 }) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const { CarouselStyled, CarouselInner, Navigate, CircleButton } = styles();
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -59,7 +62,7 @@ export const Carousel: React.FC<CarouselProps> = ({
         <Icon onClick={onLeftChevronClick} className="left" name="chevronLeft" />
         {children.map((_, index) => {
           return (
-            <CircleButton className={activeIndex === index ? "active" : ""} onClick={() => updateIndex(index)}></CircleButton>
+            <CircleButton key={index} className={activeIndex === index ? "active" : ""} onClick={() => updateIndex(index)}></CircleButton>
           );
         })}
         <Icon onClick={onRightChevronClick} className="right" name="chevronRight" />

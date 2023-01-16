@@ -1,11 +1,13 @@
 import React from "react";
-import { StyledTitle } from "./Title.styles";
+import styles from "./Title.styles";
 
 interface TitleProps {
   id?: string;
   children: React.ReactNode;
 }
 
-export const Title: React.FC<TitleProps> = ({ id, children }) => (
-  <StyledTitle id={id}>{children}</StyledTitle>
-);
+export const Title: React.FC<TitleProps> = ({ id, children }) => {
+  const { StyledTitle } = styles();
+
+  return <StyledTitle id={id}>{children}</StyledTitle>;
+};

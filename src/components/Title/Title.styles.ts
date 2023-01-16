@@ -1,14 +1,21 @@
 import { styled, Typography } from "@mui/material";
-import { colors } from "assets/pallet/colors";
+import { ThemeContext } from "Contexts/theme";
+import React from "react";
 
-export const StyledTitle = styled(Typography)({
-  fontSize: 36,
-  color: colors.primaryText,
-  fontWeight: 700,
-  "& span": {
-    color: colors.primary,
-  },
-  "& span:before": {
-    content: '"_"'
-  },
-});
+export default () => {
+  const { colors } = React.useContext(ThemeContext);
+
+  const StyledTitle = styled(Typography)({
+    fontSize: 36,
+    color: colors.textPrimary,
+    fontWeight: 700,
+    "& span": {
+      color: colors.primaryColor,
+    },
+    "& span:before": {
+      content: '"_"'
+    },
+  });
+
+  return { StyledTitle };
+};

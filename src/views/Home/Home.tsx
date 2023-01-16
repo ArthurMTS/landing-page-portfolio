@@ -1,11 +1,14 @@
 import React from "react";
-import { HomeButton, HomeImage, HomeSide } from "./Home.styles";
+import styles from "./Home.styles";
 import MyPhoto from "assets/images/me.jpg";
 import { PageContainer } from "components/PageContainer";
 import { Title } from "components/Title";
 import { Description } from "components/Description";
 
-export const Home: React.FC = () => (
+export const Home: React.FC = () => {
+  const { HomeButton, HomeImage, HomeSide } = styles();
+
+  return (
   <PageContainer>
     <HomeSide>
       <Title id="home">
@@ -24,4 +27,4 @@ export const Home: React.FC = () => (
     </HomeSide>
     <HomeImage src={MyPhoto} alt="Arthur being weird" />
   </PageContainer>
-);
+)};

@@ -1,14 +1,10 @@
 import { Icon } from "components/Icon";
 import React from "react";
-import {
-  FooterWrapper,
-  FooterCopy,
-  FooterLink,
-  FooterIcons,
-} from "./Footer.styles";
+import styles from "./Footer.styles";
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
+  const { FooterWrapper, FooterCopy, FooterLink, FooterIcons } = styles();
 
   return (
     <FooterWrapper>
