@@ -2,8 +2,9 @@ import { styled, Typography } from "@mui/material";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const FooterWrapper = styled("header")({
     width: "100%",
@@ -49,3 +50,5 @@ export default () => {
 
   return { FooterWrapper, FooterCopy, FooterLink, FooterIcons, };
 };
+
+export default useStyles;

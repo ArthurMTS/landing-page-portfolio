@@ -2,8 +2,9 @@ import { styled, Typography, Switch as MuiSwitch } from "@mui/material";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const HeaderWrapper = styled("header")({
     width: "100%",
@@ -68,3 +69,5 @@ export default () => {
 
   return { HeaderWrapper, Title, NavBar, NavLink, Switch, };
 };
+
+export default useStyles;

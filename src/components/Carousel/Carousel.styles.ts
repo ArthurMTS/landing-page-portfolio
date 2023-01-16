@@ -2,8 +2,9 @@ import { styled } from "@mui/system";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const CarouselStyled = styled("div")({
     overflow: "hidden",
@@ -17,8 +18,7 @@ export default () => {
   
   const CarouselInner = styled("div")({
     display: "flex",
-    transition: "transform 0.3s",
-    
+    transition: "all 0.3s",
   });
   
   const Navigate = styled("div")({
@@ -53,3 +53,5 @@ export default () => {
 
   return { CarouselStyled, CarouselInner, Navigate, CircleButton, CarouselImage };
 };
+
+export default useStyles;

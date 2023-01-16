@@ -7,23 +7,31 @@ interface ThemeProviderProps {
 
 interface ThemeProps {
   toggleTheme: (theme: string) => void;
-  colors: typeof dark | typeof light;
+  theme: "light" | "dark" | string;
+  getTheme: () => typeof dark | typeof light;
 }
 
 export const ThemeContext = React.createContext({} as ThemeProps);
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [colors, setColors] = React.useState(light);
+  const [theme, setTheme] = React.useState(
+    localStorage?.getItem("theme") || "light"
+  );
 
   const toggleTheme = (theme: string) => {
-    const color = theme === "light" ? light : theme === "dark" ? dark : light;
-    setColors(color);
+    setTheme(theme);
+    localStorage.setItem("theme", theme);
+  };
+
+  const getTheme = () => {
+    return theme === "light" ? light : theme === "dark" ? dark : light;
   };
 
   return (
     <ThemeContext.Provider value={{
       toggleTheme,
-      colors
+      theme,
+      getTheme
     }}>
       {children}
     </ThemeContext.Provider>

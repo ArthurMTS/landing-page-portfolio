@@ -2,8 +2,9 @@ import { styled, Typography } from "@mui/material";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const StyledTitle = styled(Typography)({
     fontSize: 36,
@@ -19,3 +20,5 @@ export default () => {
 
   return { StyledTitle };
 };
+
+export default useStyles;

@@ -1,11 +1,11 @@
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
-import styles from "./Header.styles";
+import useStyles from "./Header.styles";
 
 export const Header: React.FC = () => {
-  const [value, setValue] = React.useState(true);
-  const { HeaderWrapper, Title, NavBar, NavLink, Switch } = styles();
-  const { toggleTheme } = React.useContext(ThemeContext);
+  const { toggleTheme, theme } = React.useContext(ThemeContext);
+  const [value, setValue] = React.useState(theme === "light");
+  const { HeaderWrapper, Title, NavBar, NavLink, Switch } = useStyles();
 
   const onSwitchButtonChange = () => {
     const newValue = !value;

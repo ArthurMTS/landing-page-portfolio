@@ -3,7 +3,7 @@ import CircularProgress, {
   CircularProgressProps,
 } from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import styles from "./CircularProgress.styles";
+import useStyles from "./CircularProgress.styles";
 import { ThemeContext } from "Contexts/theme";
 
 interface CircularProgressWithLabelProps {
@@ -13,8 +13,9 @@ interface CircularProgressWithLabelProps {
 export const CircularProgressWithLabel: React.FC<
   CircularProgressProps & CircularProgressWithLabelProps
 > = props => {
-  const { colors } = React.useContext(ThemeContext);
-  const { Caption } = styles();
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
+  const { Caption } = useStyles();
 
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>

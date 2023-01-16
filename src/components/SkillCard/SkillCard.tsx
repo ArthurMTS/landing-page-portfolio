@@ -1,6 +1,6 @@
 import { CircularProgressWithLabel } from "components/CircularProgress";
 import React from "react";
-import styles from "./SkillCard.styles";
+import useStyles from "./SkillCard.styles";
 
 interface SkillCardProps {
   title: string;
@@ -17,7 +17,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   progress,
   alt,
 }) => {
-  const { Card, Logo, Title, Link } = styles();
+  const { Card, Logo, Title, Link } = useStyles();
 
   return (
   <Card>

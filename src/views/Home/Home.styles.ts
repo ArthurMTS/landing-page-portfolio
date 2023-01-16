@@ -2,8 +2,9 @@ import { styled } from "@mui/system";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const HomeSide = styled("aside")({
     display: "flex",
@@ -30,3 +31,5 @@ export default () => {
 
   return { HomeSide, HomeImage, HomeButton }
 };
+
+export default useStyles;

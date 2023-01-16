@@ -2,8 +2,9 @@ import { styled, Typography } from "@mui/material";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const Card = styled("div")({
     height: 200,
@@ -50,3 +51,5 @@ export default () => {
 
   return { Card, Logo, Title, Link };
 };
+
+export default useStyles;

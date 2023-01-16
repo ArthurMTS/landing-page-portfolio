@@ -2,8 +2,9 @@ import { styled } from "@mui/material";
 import { ThemeContext } from "Contexts/theme";
 import React from "react";
 
-export default () => {
-  const { colors } = React.useContext(ThemeContext);
+const useStyles = () => {
+  const { getTheme } = React.useContext(ThemeContext);
+  const colors = getTheme();
 
   const PageContainerStyled = styled("section")({
     width: "99.3vw",
@@ -27,3 +28,5 @@ export default () => {
 
   return { PageContainerStyled };
 };
+
+export default useStyles;

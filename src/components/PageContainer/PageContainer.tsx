@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PageContainer.styles";
+import useStyles from "./PageContainer.styles";
 
 interface PageContainerProps {
   className?: string;
@@ -12,7 +12,7 @@ export const PageContainer: React.FC<PageContainerProps> = ({
   id,
   className,
 }) => {
-  const { PageContainerStyled } = styles();
+  const { PageContainerStyled } = useStyles();
 
   return (
     <PageContainerStyled id={id} className={className}>

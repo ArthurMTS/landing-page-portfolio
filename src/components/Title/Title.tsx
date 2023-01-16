@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Title.styles";
+import useStyles from "./Title.styles";
 
 interface TitleProps {
   id?: string;
@@ -7,7 +7,7 @@ interface TitleProps {
 }
 
 export const Title: React.FC<TitleProps> = ({ id, children }) => {
-  const { StyledTitle } = styles();
+  const { StyledTitle } = useStyles();
 
   return <StyledTitle id={id}>{children}</StyledTitle>;
 };

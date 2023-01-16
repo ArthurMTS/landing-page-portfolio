@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./Home.styles";
+import useStyles from "./Home.styles";
 import MyPhoto from "assets/images/me.jpg";
 import { PageContainer } from "components/PageContainer";
 import { Title } from "components/Title";
 import { Description } from "components/Description";
 
 export const Home: React.FC = () => {
-  const { HomeButton, HomeImage, HomeSide } = styles();
+  const { HomeButton, HomeImage, HomeSide } = useStyles();
 
   return (
   <PageContainer>

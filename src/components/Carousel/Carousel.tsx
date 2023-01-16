@@ -1,6 +1,6 @@
 import { Icon } from "components/Icon";
 import React from "react";
-import styles from "./Carousel.styles";
+import useStyles from "./Carousel.styles";
 
 interface CarouselItemProps {
   img: string;
@@ -12,7 +12,7 @@ interface CarouselProps {
 }
 
 export const CarouselItem: React.FC<CarouselItemProps> = ({ img }) => {
-  const { CarouselImage } = styles();
+  const { CarouselImage } = useStyles();
 
   return (
     <CarouselImage src={img} />
@@ -24,7 +24,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   width
 }) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const { CarouselStyled, CarouselInner, Navigate, CircleButton } = styles();
+  const { CarouselStyled, CarouselInner, Navigate, CircleButton } = useStyles();
 
   React.useEffect(() => {
     const interval = setInterval(() => {
