@@ -9,11 +9,31 @@ const useStyles = () => {
   const DescriptionStyled = styled(Typography)({
     fontSize: 16,
     color: colors.description,
-    width: 550,
+    width: "40vw",
     "& span": {
       color: colors.green,
     },
     margin: "20px 0",
+    "@media (max-width: 900px)": {
+      "&": {
+        width: "50vw",
+      },
+    },
+    "@media (max-width: 560px)": {
+      "&": {
+        fontSize: 12,
+      },
+    },
+    "@media (max-width: 450px)": {
+      "&": {
+        width: "65vw",
+      },
+    },
+    "@media (max-width: 320px)": {
+      "&": {
+        fontSize: 10,
+      },
+    },
   });
 
   return { DescriptionStyled };

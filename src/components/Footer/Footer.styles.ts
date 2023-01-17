@@ -14,16 +14,28 @@ const useStyles = () => {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "0 20px",
+    "@media (max-width: 260px)": {
+      "&": {
+        flexDirection: "column",
+        padding: "10px 0",
+        gap: 5,
+      },
+    },
   });
-  
+
   const FooterCopy = styled(Typography)({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     color: colors.textSecondary,
     fontSize: 14,
+    "@media (max-width: 260px)": {
+      "&": {
+        fontSize: 12,
+      },
+    },
   });
-  
+
   const FooterLink = styled("a")({
     display: "flex",
     alignItems: "center",
@@ -36,8 +48,13 @@ const useStyles = () => {
     "&:hover": {
       color: colors.primaryColor,
     },
+    "@media (max-width: 260px)": {
+      "&": {
+        fontSize: 12,
+      },
+    },
   });
-  
+
   const FooterIcons = styled("div")({
     display: "flex",
     gap: 15,
@@ -48,7 +65,7 @@ const useStyles = () => {
     },
   });
 
-  return { FooterWrapper, FooterCopy, FooterLink, FooterIcons, };
+  return { FooterWrapper, FooterCopy, FooterLink, FooterIcons };
 };
 
 export default useStyles;

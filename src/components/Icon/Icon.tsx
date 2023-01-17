@@ -19,7 +19,12 @@ interface IconProps {
   onClick?: () => void;
 }
 
-export const Icon: React.FC<IconProps> = ({ name, alt, className, onClick }) => {
+export const Icon: React.FC<IconProps> = ({
+  name,
+  alt,
+  className,
+  onClick,
+}) => {
   const Icon = Icons[name];
 
   return <Img onClick={onClick} className={className} src={Icon} alt={alt} />;

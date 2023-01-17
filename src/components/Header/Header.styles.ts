@@ -17,8 +17,14 @@ const useStyles = () => {
     left: 0,
     top: 0,
     zIndex: 1,
+    "@media (max-width: 600px)": {
+      "&": {
+        flexDirection: "column",
+        paddingTop: 10,
+      },
+    },
   });
-  
+
   const Title = styled(Typography)({
     color: colors.textPrimary,
     fontWeight: 700,
@@ -35,14 +41,24 @@ const useStyles = () => {
     "&:hover": {
       color: colors.primaryColor,
     },
+    "@media (max-width: 315px)": {
+      "&": {
+        fontSize: 20,
+      },
+    },
+    "@media (max-width: 260px)": {
+      "&": {
+        fontSize: 16,
+      },
+    },
   });
-  
+
   const NavBar = styled("nav")({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   });
-  
+
   const NavLink = styled("a")({
     cursor: "pointer",
     textDecoration: "none",
@@ -53,8 +69,18 @@ const useStyles = () => {
     "&:hover": {
       backgroundColor: colors.primaryColor,
     },
+    "@media (max-width: 315px)": {
+      "&": {
+        fontSize: 16,
+      },
+    },
+    "@media (max-width: 260px)": {
+      "&": {
+        fontSize: 12,
+      },
+    },
   });
-  
+
   const Switch = styled(MuiSwitch)({
     "& .MuiSwitch-switchBase.Mui-checked": {
       color: "#222",
@@ -67,7 +93,7 @@ const useStyles = () => {
     },
   });
 
-  return { HeaderWrapper, Title, NavBar, NavLink, Switch, };
+  return { HeaderWrapper, Title, NavBar, NavLink, Switch };
 };
 
 export default useStyles;

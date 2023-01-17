@@ -10,15 +10,20 @@ const useStyles = () => {
     display: "flex",
     flexDirection: "column",
   });
-  
+
   const HomeImage = styled("img")({
-    width: 350,
+    width: "25vw",
     transform: "rotate(-20deg)",
     boxShadow: `-20px 20px 0px ${colors.primaryColor}`,
     borderRadius: 20,
     marginRight: 60,
+    "@media (max-width: 900px)": {
+      "&": {
+        display: "none",
+      },
+    },
   });
-  
+
   const HomeButton = styled("a")({
     textDecoration: "none",
     color: "#F7F7F7",
@@ -27,9 +32,14 @@ const useStyles = () => {
     padding: "10px 15px",
     borderRadius: 50,
     alignSelf: "flex-start",
+    "@media (max-width: 320px)": {
+      "&": {
+        fontSize: 12,
+      },
+    },
   });
 
-  return { HomeSide, HomeImage, HomeButton }
+  return { HomeSide, HomeImage, HomeButton };
 };
 
 export default useStyles;

@@ -27,10 +27,7 @@ export const Header: React.FC = () => {
         </NavLink>
         <NavLink href="#skills">Skills</NavLink>
         <NavLink href="#portfolio">Portfolio</NavLink>
-        <Switch
-          checked={value}
-          onChange={onSwitchButtonChange}
-        />
+        <Switch checked={value} onChange={onSwitchButtonChange} />
       </NavBar>
     </HeaderWrapper>
   );

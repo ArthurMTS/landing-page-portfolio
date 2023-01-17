@@ -15,7 +15,7 @@ export const ThemeContext = React.createContext({} as ThemeProps);
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = React.useState(
-    localStorage?.getItem("theme") || "light"
+    localStorage?.getItem("theme") || "light",
   );
 
   const toggleTheme = (theme: string) => {
@@ -28,12 +28,14 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{
-      toggleTheme,
-      theme,
-      getTheme
-    }}>
+    <ThemeContext.Provider
+      value={{
+        toggleTheme,
+        theme,
+        getTheme,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
-  )
+  );
 };

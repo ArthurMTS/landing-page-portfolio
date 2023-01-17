@@ -8,21 +8,31 @@ const useStyles = () => {
 
   const PageContainerStyled = styled("section")({
     width: "99.3vw",
-    height: "100vh",
+    minHeight: "100vh",
     backgroundColor: colors.backgroundPrimary,
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: "0 80px",
+    padding: "0 5.5vw",
     "&.center": {
       justifyContent: "start !important",
       alignItems: "center",
       paddingTop: 80,
       flexDirection: "column",
+      "@media (max-width: 600px)": {
+        "&": {
+          paddingTop: 120,
+        },
+      },
     },
     "&.last": {
       backgroundColor: colors.backgroundSecondary,
       height: "calc(100vh - 60px)",
+    },
+    "@media (max-width: 900px)": {
+      "&": {
+        justifyContent: "center",
+      },
     },
   });
 

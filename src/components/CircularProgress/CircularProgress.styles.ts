@@ -11,7 +11,7 @@ const useStyles = () => {
     fontWeight: 700,
   });
 
-  return { Caption }
+  return { Caption };
 };
 
 export default useStyles;

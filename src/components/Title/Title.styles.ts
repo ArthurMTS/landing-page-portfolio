@@ -14,7 +14,17 @@ const useStyles = () => {
       color: colors.primaryColor,
     },
     "& span:before": {
-      content: '"_"'
+      content: '"_"',
+    },
+    "@media (max-width: 560px)": {
+      "&": {
+        fontSize: 26,
+      },
+    },
+    "@media (max-width: 320px)": {
+      "&": {
+        fontSize: 20,
+      },
     },
   });
 

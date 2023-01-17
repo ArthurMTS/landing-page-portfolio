@@ -22,18 +22,35 @@ const useStyles = () => {
     "&:hover a": {
       display: "flex",
     },
+    "@media (max-width: 500px)": {
+      "&": {
+        height: 135,
+        width: 135,
+        gap: 5,
+      },
+    },
   });
-  
+
   const Logo = styled("img")({
     width: 40,
+    "@media (max-width: 500px)": {
+      "&": {
+        width: 25,
+      },
+    },
   });
-  
+
   const Title = styled(Typography)({
     color: colors.textPrimary,
     fontSize: 18,
     fontWeight: 700,
+    "@media (max-width: 500px)": {
+      "&": {
+        fontSize: 12,
+      },
+    },
   });
-  
+
   const Link = styled("a")({
     textDecoration: "none",
     fontSize: 20,

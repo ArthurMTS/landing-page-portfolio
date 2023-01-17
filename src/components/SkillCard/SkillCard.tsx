@@ -20,12 +20,13 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   const { Card, Logo, Title, Link } = useStyles();
 
   return (
-  <Card>
-    <Logo src={icon} alt={alt} />
-    <Title>{title}</Title>
-    <CircularProgressWithLabel value={progress} />
-    <Link href={url} target="_blank">
-      Learn More
-    </Link>
-  </Card>
-);};
+    <Card>
+      <Logo src={icon} alt={alt} />
+      <Title>{title}</Title>
+      <CircularProgressWithLabel value={progress} />
+      <Link href={url} target="_blank">
+        Learn More
+      </Link>
+    </Card>
+  );
+};
